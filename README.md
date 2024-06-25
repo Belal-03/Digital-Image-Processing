@@ -2,8 +2,7 @@
 
 
 Assignment 1
-Obtain the images “LenaGray.jpg” and “PeppersGrey.jpg” from the assignment 
-directory on MS Teams. Each image has 256 × 256 pixels and each pixel has 8 bits. 
+Obtain the images “LenaGray.jpg” and “PeppersGrey.jpg”. Each image has 256 × 256 pixels and each pixel has 8 bits. 
 a) Read and display the images. 
 b) Define a new 256 × 256 image J as follows: the upper half of J, i.e., the first 
 128 rows, should be equal to the upper half of the Lena image. The lower half 
