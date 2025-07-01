@@ -1,33 +1,68 @@
-# Digital-Image-Processing
+# 🖼️ Digital Image Processing – Assignments 1 & 2
 
+This project includes two foundational assignments in digital image processing, focusing on pixel-level operations, image manipulation, and noise reduction. All tasks are performed on grayscale images using Python and image processing libraries.
 
-Assignment 1
-Obtain the images “LenaGray.jpg” and “PeppersGrey.jpg”. Each image has 256 × 256 pixels and each pixel has 8 bits. 
-a) Read and display the images. 
-b) Define a new 256 × 256 image J as follows: the upper half of J, i.e., the first 
-128 rows, should be equal to the upper half of the Lena image. The lower half 
-of J, i.e., the 129th row through the 256th row, should be equal to the lower
-half of the Peppers image. 
-c) Define a new 256 × 256 image K by swapping the upper and lower halves of J.
-Turn in: 
-1) A listing of your code.
-2) Printouts of the original images, image J, and image K.
+---
 
+## 📂 Assignment 1: Image Composition & Manipulation
 
+### 📝 Task Overview
 
-Assignment 2
-Obtain the images “LenaGrayNoisy.jpg” and “PeppersGreyNoisy.jpg” from the 
-assignment directory on MS Teams. These are 256 × 256 gray scale images with 8 
-bits per pixel. They have been corrupted by salt and pepper noise. 
-Write a program to implement (i) Image Negative and (ii) a gray scale Median Filter. 
-In the cases of median filter, use a 3 × 3 square structuring element (window). To 
-handle edge effects, set output pixels equal to gray level zero when the structuring 
-element hangs over the borders of the image. 
-(Note: we usually handle edge effects by replication for these filters. But setting the 
-output pixels to zero instead simplifies the programming required for doing this 
-assignment). 
-Turn in: 
-1) A listing of your program. 
-2) Printouts of the two original images and the results of applying the image 
-negative and the median to the original images. 
-3) A one page discussion of how the results of the different operators are.
+Work with two 256×256 grayscale images: **`LenaGray.jpg`** and **`PeppersGrey.jpg`**, where each pixel has 8-bit depth.
+
+### 🔧 Tasks
+
+#### ✅ a) Read and Display the Images
+- Load and display both input images to verify their structure.
+
+#### ✅ b) Create Composite Image J
+- Define a new 256×256 image `J`:
+  - Upper half (rows 0–127): from **LenaGray**
+  - Lower half (rows 128–255): from **PeppersGrey**
+
+#### ✅ c) Create Image K by Swapping Halves
+- Define a new image `K` by swapping the upper and lower halves of image `J`.
+
+### 📦 Deliverables
+- Source code used to implement tasks.
+- Output images:
+  - Original Lena and Peppers
+  - Combined image `J`
+  - Swapped image `K`
+- Screenshots or plots of each image as visual confirmation.
+
+---
+
+## 📂 Assignment 2: Image Enhancement & Noise Reduction
+
+### 📝 Task Overview
+
+Use the noisy images **`LenaGrayNoisy.jpg`** and **`PeppersGreyNoisy.jpg`**, which are 256×256 grayscale images corrupted by **salt and pepper noise**.
+
+### 🔧 Tasks
+
+#### ✅ i) Image Negative
+- Implement the image negative operation by inverting grayscale pixel values:
+  - `output_pixel = 255 - input_pixel`
+
+#### ✅ ii) Grayscale Median Filter
+- Apply a **3×3 median filter** to reduce salt and pepper noise.
+- Handle edge effects by setting output pixels to **zero** when the filter window overlaps the border.
+
+### 📦 Deliverables
+- Source code for the negative transformation and median filtering.
+- Output images:
+  - Original noisy images
+  - Results of the **negative transformation**
+  - Results of the **median filter**
+- A one-page PDF or markdown **discussion** comparing the effects of both operators.
+
+---
+
+## 🛠️ Tools & Libraries
+
+| Tool / Library   | Usage                            |
+|------------------|----------------------------------|
+| `OpenCV` (`cv2`) | Image reading, processing, display |
+| `NumPy`          | Array operations and manipulation |
+| `Matplotlib`     | Display images in notebooks or scripts |
